@@ -1,38 +1,131 @@
+body{
+  background-color: #77ffabda;
+}
 .App {
+  margin-top:20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: Snesitalic;
+  src: url(SnesItalic.ttf);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*{
+  font-family: Snesitalic;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  font-family: Snesitalic;
+  align-items: center;
   display: flex;
+  justify-content: center;
+}
+
+
+
+#calc-container{
+  display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #d0cfd3;
+  box-shadow: 5px 5px 10px  rgb(78, 64, 64);
+  border-radius: 37px;
+  height: 480px;
+  width: 321px;
+  position: relative;
+}
+
+#corner-txt{
+  top: -15px;
+  position: absolute;
+  text-align: center;
+  margin-right:-120px;
+  font-style: italic;
+  font-size: 25px;
+  color: #ee1000;
+  font-weight: bold;
+  height: 20px;
+  width: 130px;
+  border:2px solid red;
+  border-radius: 20px; 
+}
+
+#screen{
+  display: flex;
+  align-self: flex-start;
+  background-color: #EBA7A7;
+  font-weight: bold;
+  width: 270px;
+  height:85px;
+  border:1px solid #E19191;
+  border-radius: 17px;
+  margin-top:40px;
+  margin-left:25px;
+  text-align:left;
+}
+
+#screen-txt{
+  font-size: 40px;
+  margin-left: 10px;
+  color:rgb(129, 99, 23);
+}
+
+#button-div{
+  display:grid;
+  grid-template-columns:repeat(4, 70px);
+  grid-template-rows: repeat(4,65px);
+}
+
+button{
+  font-size: 30px;
+  text-align: center;
+  color: #d0cfd2;
+  border-radius: 360px;
+  background-color: #593592;
+  box-shadow:1px 1px 1px #444648 ;
+  width:60px;
+  height:60px;
+  margin-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+button:active{
   color: white;
+  background-color: #340441;
 }
 
-.App-link {
-  color: #61dafb;
+.clear, #delete-btn{
+
+  background-color:  #444648;
+  background-image: linear-gradient(#444648, #515355);
+  border: 1px solid #a8a5a5;
+  font-size: 25px;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clear:active, #delete-btn:active{
+  background-color:#a8a5a5;
+  border: 2px solid  #D9D9D9;
 }
+
+.math-func{
+  color: #93919c;
+  font-weight: bolder;
+  background-color: #b8b4e8;
+  background-image: linear-gradient(#b8b4e8, #e3e2ec);
+}
+
+.math-func:active{
+  color:white;
+  background-color: #8a84d6;
+}
+
+
+.numbers, #decimal, #negative, #equals-btn{
+  background-image: linear-gradient(#593592,  #7f4fce);
+
+}
+
